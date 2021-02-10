@@ -20,6 +20,7 @@ namespace Code_Coach_Challenge
     {
         string text;
         string initial;  //created a field
+        
         public Post() //then gived initial value
         {
             initial = "New post";
