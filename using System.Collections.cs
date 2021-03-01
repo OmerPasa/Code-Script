@@ -13,7 +13,16 @@ public class Kata
     List<string> list = new List<string>();
     list.Add(sentence);
     
+    //psudeo  codde
+    /*
+    fist  we need t oget slip the words 
+    second we founf it how much string it contains
+    third we need a way to detect corropt writing and his real one or else
+    then we clamp them together and return the string
     
+
+
+    */
     
     
     
