@@ -30,13 +30,14 @@ namespace Code_Coach_Challenge
             this.name = name;
             this.points = points;
         }
+        //overload the + operator
         public static DancerPoints operator +(DancerPoints points1, DancerPoints points2)
         {
-            int Collect=points1 + points2;
+            //int Collect = points1 + points2 == points;
+            DancerPoints res = new DancerPoints(points1, points2);
             return res;
-            Console.Write(DancerPoints);
+            Console.Write(points);
         }
-        //overload the + operator
 
     }
 }
