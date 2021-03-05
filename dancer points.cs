@@ -42,8 +42,14 @@ namespace Code_Coach_Challenge
     }
 }
 /*
+input 
+
 Dave
 8
 Jessica
 7
+
+output
+Dave & Jessica
+15
 */
