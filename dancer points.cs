@@ -5,6 +5,8 @@ namespace Code_Coach_Challenge
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             string name1 = Console.ReadLine();
@@ -35,8 +37,8 @@ namespace Code_Coach_Challenge
         public static DancerPoints operator+ (DancerPoints n, DancerPoints p)
         {
 
-            string name = n.name1 + " & " + n.name2;
-            int points = p.points1 + p.points2;
+            string name = n.name + " & " + n.name;
+            int points = p.points + p.points;
             DancerPoints res = new DancerPoints(name, points);
 
             return res;
