@@ -30,18 +30,48 @@ namespace Code_Coach_Challenge
             this.name = name;
             this.points = points;
         }
-        //overload the + operator
-        public static DancerPoints operator +(DancerPoints points1, DancerPoints points2)
-        {
-            //int Collect = points1 + points2 == points;
-            DancerPoints res = new DancerPoints(points1, points2);
-            return res;
-            Console.Write(points);
-        }
 
+        //overload the + operator
+        public static DancerPoints operator+ (DancerPoints n, DancerPoints p)
+        {
+
+            string name = n.name1 + " & " + n.name2;
+            int points = p.points1 + p.points2;
+            DancerPoints res = new DancerPoints(name, points);
+
+            return res;
+            
+            //DancerPoints( name1 + "&" + name2 = name , points1 + points2 = points);
+        }
     }
 }
+
 /*
+
+
+public static DancerPoints operator+ (DancerPoints a, DancerPoints b)
+        {
+            string name = a.name + "&" + b.name;
+            int points = a.points + b.points;
+
+            DancerPoints res = new DancerPoints(name, points)
+
+            return res;
+        }
+
+public static Box operator+ (Box b, Box c)
+{
+   Box box = new Box();
+   
+   box.length = b.length + c.length;
+   
+   box.breadth = b.breadth + c.breadth;
+  
+   return box;
+}
+
+
+
 input 
 
 Dave
