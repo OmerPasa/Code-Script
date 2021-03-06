@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+// just posted questinon
 namespace Code_Coach_Challenge
 {
     class Program
@@ -49,7 +49,6 @@ namespace Code_Coach_Challenge
 }
 
 /*
-
 
 public static DancerPoints operator+ (DancerPoints a, DancerPoints b)
         {
