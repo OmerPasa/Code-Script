@@ -25,7 +25,7 @@ namespace Code_Coach_Challenge
 
     class DancerPoints
     {
-        public string name;
+        public string name;// you can change name and point to something else :D 
         public int points;
         public DancerPoints(string name, int points)
         {
@@ -37,8 +37,8 @@ namespace Code_Coach_Challenge
         public static DancerPoints operator+ (DancerPoints n, DancerPoints p)
         {
 
-            string name = n.name + " & " + n.name;
-            int points = p.points + p.points;
+            string name = n.name + " & " + p.name;
+            int points = n.points + p.points;
             DancerPoints res = new DancerPoints(name, points);
 
             return res;
