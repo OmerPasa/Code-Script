@@ -52,6 +52,10 @@ namespace Code_Coach_Challenge
     class Spray : Draw
     {
         //implement the StartDraw() method
+        public override void StartDraw()
+        {
+            Console.WriteLine("Using spray")
+        }
 
     }
 }
