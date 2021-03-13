@@ -43,7 +43,7 @@ namespace Code_Coach_Challenge
         //implement the StartDraw() method
         public override void StartDraw()
         {
-            Console.WriteLine("Using brush")
+            Console.WriteLine("Using brush");
         }
 
     }
@@ -54,7 +54,7 @@ namespace Code_Coach_Challenge
         //implement the StartDraw() method
         public override void StartDraw()
         {
-            Console.WriteLine("Using spray")
+            Console.WriteLine("Using spray");
         }
 
     }
