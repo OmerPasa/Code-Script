@@ -26,11 +26,11 @@ namespace SoloLearn
             */
             catch (DivideByZeroException oex)
             {
-                Console.WriteLine(At least 1 shelf);
+                Console.WriteLine("At least 1 shelf");
             }
             catch (FormatException fex)
             {
-                Console.WriteLine(Please insert an integer);
+                Console.WriteLine("Please insert an integer");
 
             }
         }
