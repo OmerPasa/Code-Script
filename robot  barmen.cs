@@ -17,6 +17,7 @@ namespace SoloLearn
 
                 //your code goes here
                 //drinks / shelves = shelvesperdrink
+                Console.WriteLine(drinks / shelves);
 
             }
             /*
@@ -25,11 +26,11 @@ namespace SoloLearn
             */
             catch (DivideByZeroException oex)
             {
-                Console.WriteLine(oex.Message);
+                Console.WriteLine(At least 1 shelf);
             }
             catch (FormatException fex)
             {
-                Console.WriteLine(fex.Message);
+                Console.WriteLine(Please insert an integer);
 
             }
         }
