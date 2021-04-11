@@ -35,17 +35,16 @@ namespace SoloLearn
                 Console.WriteLine("Value; {0}", coffee[cf]);
                 
             }
-
+            // because of complier limitations attempt down below unsuccesful. :(
             Dictionary<string, int>.ValueCollection values = coffee.Values;  
             foreach (int val in values)  
             {
                 a = val * discount;
                 a = a / 100;
-                a = val;
+                val -= a;
                 Console.WriteLine("Value; {0}", val);
                 
             }
-
 
 
 
