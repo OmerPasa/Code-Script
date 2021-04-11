@@ -23,6 +23,7 @@ namespace SoloLearn
             Dictionary<string, int>.ValueCollection values = coffee.Values;  
             foreach (int val in values)  
             {  
+                coffee.Values * discount / 100 = new coffee.Values;
                 Console.WriteLine("Value: {0}", val);  
             }
 
