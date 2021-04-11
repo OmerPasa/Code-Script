@@ -24,7 +24,16 @@ namespace SoloLearn
             foreach (int val in values)  
             {  
                 coffee.Values * discount / 100 = new coffee.Values;
-                Console.WriteLine("Value: {0}", val);  
+                Console.WriteLine("Value: {0}", val);
+                /*
+                val * discount = cal;
+                cal / 100 = new val();
+                Console.WriteLine("Value: {0}", val); 
+                */
+
+
+
+
             }
 
 
