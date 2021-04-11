@@ -23,7 +23,7 @@ namespace SoloLearn
             foreach (string cf in coffee.Keys.ToArray())  
             {
                 coffee[cf] -= (coffee[cf]*discount)/100;
-                Console.WriteLine(cccp+": "+coffee[cf]); 
+                Console.WriteLine(cf+": "+coffee[cf]); 
                 
             }
 
