@@ -28,7 +28,7 @@ namespace SoloLearn
                 coffee[cf] -= a;  
             }
             foreach (KeyValuePair<string, int> cf in coffee)
-            Console.WriteLine("{0}:{1}", cf.Key, cf.Value);
+            Console.WriteLine("{0}: {1}", cf.Key, cf.Value);
             /*
             foreach (string cf in coffee.Keys.ToArray())  
             {
