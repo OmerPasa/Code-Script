@@ -20,26 +20,21 @@ namespace SoloLearn
             coffee.Add("Cappuccino", 80);
             coffee.Add("Mocha", 90);
 
-            /* foreach (string c in coffee.Keys.ToArray())
+            foreach (string cf in coffee.Keys.ToArray())  
             {
-            //performing calculations 
+                coffee[cf] -= (coffee[cf]*discount)/100;
+                Console.WriteLine(cccp+": "+coffee[cf]); 
+                
             }
-            */
 
             Dictionary<string, int>.ValueCollection values = coffee.Values;  
             foreach (int val in values)  
-            {  
-                coffee.Values * discount / 100 = new coffee.Values;
-                Console.WriteLine("Value: {0}", val);
-                /*
-                val * discount = cal;
-                cal / 100 = new val();
-                Console.WriteLine("Value: {0}", val); 
-                */
-
-
-
-
+            {
+                a = val * discount;
+                a = a / 100;
+                a = val;
+                Console.WriteLine("Value; {0}", val);
+                
             }
 
 
