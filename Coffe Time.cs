@@ -20,8 +20,19 @@ namespace SoloLearn
             coffee.Add("Cappuccino", 80);
             coffee.Add("Mocha", 90);
 
+            Dictionary<string, int>.ValueCollection values = coffee.Values;  
+            foreach (int val in values)  
+            {  
+                Console.WriteLine("Value: {0}", val);  
+            }
 
-            //your code goes here
+
+
+
+
+
+
+
 
 
 
