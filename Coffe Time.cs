@@ -19,9 +19,9 @@ namespace SoloLearn
             coffee.Add("Flat White", 60);
             coffee.Add("Espresso", 60);
             coffee.Add("Cappuccino", 80);
-            coffee.Add("Mocha", 90);
-            ////////////////////////////////////////////////////////////this works
-                        foreach (string cf in coffee.Keys.ToArray()) 
+            coffee.Add("Mocha", 90); 
+            
+            foreach (string cf in coffee.Keys.ToArray()) 
             {
                 a = coffee[cf] * discount;
                 a = a / 100;
@@ -29,6 +29,9 @@ namespace SoloLearn
             }
             foreach (KeyValuePair<string, int> cf in coffee)
             Console.WriteLine("{0}: {1}", cf.Key, cf.Value);
+        }
+    }
+}
             /*
             foreach (string cf in coffee.Keys.ToArray())  
             {
@@ -57,6 +60,3 @@ namespace SoloLearn
                 
             }
             */
-        }
-    }
-}
