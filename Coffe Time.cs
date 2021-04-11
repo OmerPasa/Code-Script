@@ -11,6 +11,7 @@ namespace SoloLearn
         static void Main(string[] args)
         {
             int discount = Convert.ToInt32(Console.ReadLine());
+            int a;
 
             Dictionary<string, int> coffee = new Dictionary<string, int>();
             coffee.Add("Americano", 50);
@@ -19,7 +20,16 @@ namespace SoloLearn
             coffee.Add("Espresso", 60);
             coffee.Add("Cappuccino", 80);
             coffee.Add("Mocha", 90);
-
+            ////////////////////////////////////////////////////////////this works
+                        foreach (string cf in coffee.Keys.ToArray()) 
+            {
+                a = coffee[cf] * discount;
+                a = a / 100;
+                coffee[cf] -= a;  
+            }
+            foreach (KeyValuePair<string, int> cf in coffee)
+            Console.WriteLine("{0}:{1}", cf.Key, cf.Value);
+            /*
             foreach (string cf in coffee.Keys.ToArray())  
             {
                 coffee[cf] -= (coffee[cf]*discount)/100;
@@ -35,6 +45,7 @@ namespace SoloLearn
                 Console.WriteLine("Value; {0}", coffee[cf]);
                 
             }
+            
             // because of complier limitations attempt down below unsuccesful. :(
             Dictionary<string, int>.ValueCollection values = coffee.Values;  
             foreach (int val in values)  
@@ -45,16 +56,7 @@ namespace SoloLearn
                 Console.WriteLine("Value; {0}", val);
                 
             }
-
-
-
-
-
-
-
-
-
-
+            */
         }
     }
 }
