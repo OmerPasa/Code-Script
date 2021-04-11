@@ -27,6 +27,15 @@ namespace SoloLearn
                 
             }
 
+            foreach (string cf in coffee.Keys.ToArray()) 
+            {
+                a = coffee[cf] * discount;
+                a = a / 100;
+                coffee[cf] -= a;
+                Console.WriteLine("Value; {0}", coffee[cf]);
+                
+            }
+
             Dictionary<string, int>.ValueCollection values = coffee.Values;  
             foreach (int val in values)  
             {
