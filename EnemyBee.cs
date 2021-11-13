@@ -2,30 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonEnemy : MonoBehaviour
+public class EnemyBee : MonoBehaviour
 {
     [SerializeField]
-    private GameObject EnemyTurtleAuto;
+    private GameObject EnemyBeeAuto;
     [SerializeField]
     private float timeBtwAttack;
     [SerializeField]
     public float startTimeBtwAttack;
-    
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public float attackRange;
     private float damageDelay;
     public int health = 4;
-    public int damage = 1;
+    public int damage = 3;
     int Count;
-    const string ENEMY_IDLERUN = "Turtle_Idle-Run";
-    const string ENEMY_DEATH = "Turtle_Explode";
-    const string ENEMY_TAKEDAMAGE = "Turtle_TakeDamage";
-        private Animator animator;
+    const string ENEMY_IDLE = "Bee_Movement";
+    const string ENEMY_TAKEDAMAGE = "Bee_TakeDamage";
+    const string ENEMY_DEATH = "Bee_Explode";
+    const string ENEMY_ATTACK = "Bee_Attacking";
+    private Animator animator;
     private string currentAnimaton;
     private bool isAttacking;
     private bool isTakingDamage;
-    
     private bool isDying;
     private void Start() {
         animator = GetComponent<Animator>();
@@ -34,8 +33,9 @@ public class CommonEnemy : MonoBehaviour
     {
         if (!isAttacking && !isTakingDamage && !isDying)
         {
-        ChangeAnimationState(ENEMY_IDLERUN);
+        ChangeAnimationState(ENEMY_IDLE);
         }
+        
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
         if (timeBtwAttack <= 0)
@@ -46,6 +46,7 @@ public class CommonEnemy : MonoBehaviour
             for (int i = 0; i < enemiesInRange.Length; i++)
             {
                 isAttacking = true;
+                ChangeAnimationState(ENEMY_ATTACK);
                 enemiesInRange[i].GetComponent<PlayerScript>().PlayerTakeDamage(damage);
                 Debug.Log("damage given");
                 isAttacking = false;
@@ -81,8 +82,8 @@ public class CommonEnemy : MonoBehaviour
         {
             isDying = true;
             ChangeAnimationState(ENEMY_DEATH);
-            Invoke("Die",1f);
-            
+            Debug.Log("BEE_DIED");
+            Invoke("Die",0.9f);
         }
     }
     void DamageDelayComplete()
@@ -91,7 +92,7 @@ public class CommonEnemy : MonoBehaviour
     }
     void Die()
     {
-        Destroy(EnemyTurtleAuto);
+        Destroy(EnemyBeeAuto);
     }
     void ChangeAnimationState(string newAnimation)
     {
@@ -101,3 +102,4 @@ public class CommonEnemy : MonoBehaviour
         currentAnimaton = newAnimation;
     }
 }
+

@@ -5,27 +5,51 @@ using System.Timers;
 
 public class SpawnArea : MonoBehaviour
 {
-    public GameObject bug;
-    public int xPos;
-    public int yPos;
-    public int enemyCount;
-
-    void Start ()
+    private bool collusionhappened;
+    public GameObject Trutle;
+    public Transform EnemySpawner;
+    int xPos;
+    int yPos;
+    [SerializeField]
+    private int Maxcount;
+    [SerializeField]
+     private int Count;
+     
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("triggered!!!!");
+    if(other.gameObject.tag == "Player")
+    {
+        if (collusionhappened)
+        {
+            return;   
+        }else
+        {
+        xPos = (int)transform.position.x;
+        yPos = (int)transform.position.y;
         StartCoroutine(EnemyDrop());
+        collusionhappened = true;      
+        }
+          
+    }
     }
     IEnumerator EnemyDrop()
    {
-       while (enemyCount < 8)
+       for (Count = 0; Count < Maxcount; Count++)
        {
-           xPos = (int)Random.Range(-1f,1f);
-           yPos = (int)Random.Range(8f,-7f);
-           Instantiate(bug,new Vector3(xPos,yPos,-0.1f),Quaternion.identity);
+           Instantiate(Trutle,new Vector3(xPos,yPos,0f),Quaternion.identity);
            yield return new WaitForSeconds(0.1f);
-           enemyCount += 1;
-    
-
        }
-   }
+       /*
+       if (Count == Maxcount)
+        {
+            yield return null;
+        }else
+        {
+            Instantiate(Trutle,new Vector3(xPos,yPos,0f),Quaternion.identity);
+            yield return new WaitForSeconds(0.1f);
+        }
 
+        */
+    }
 }
