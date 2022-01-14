@@ -10,6 +10,8 @@ public class BulletScriptt : MonoBehaviour
     [SerializeField]
     int damage;
     Rigidbody2D rb2d;
+    [SerializeField]
+    public CommonEnemy enemy;
 
 
     public void StartShooting(bool isFacingLeft)
