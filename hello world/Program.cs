@@ -10,7 +10,8 @@ namespace HelloWorld
     class Program
     {
         static void Main()
-        {/*
+        {
+          /*
           //ondan küçük mü 1 den büyük mü?
             Console.WriteLine("Please enter a number 1-10:");
             var Value = Console.ReadLine();
@@ -123,6 +124,34 @@ namespace HelloWorld
             //If two people like your post, it displays: [Friend 1] and[Friend 2] like your post.
             //If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number of Other People] others like your post.
 
+            var names = new List<string>();
+            string name ;
+            bool Posted = false;
+            while (!Posted)
+            {
+            Console.WriteLine("Please enter whom liked ?");
+            name = Console.ReadLine();
+            if (!string.IsNullOrEmpty(name))
+	           {
+                    names.Add(name);
+
+                    //If no one likes your post, it doesn't display anything.
+                    //If only one person likes your post, it displays: [Friend's Name] likes your post.
+                    //If two people like your post, it displays: [Friend 1] and[Friend 2] like your post.
+                    //If more than two people like your post, it displays:
+                    //[Friend 1], [Friend 2] and[Number of Other People] others like your post.
+
+                }
+                else
+                {
+                    Posted = true;
+                    foreach (var thing in names)
+                    {
+                        Console.WriteLine(thing);
+                    }
+                }
+            }
+            
 
 
 

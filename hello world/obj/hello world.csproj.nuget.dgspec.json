@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pasa\\source\\repos\\hello world\\hello world\\hello world.csproj": {}
+    "D:\\Code-Script\\hello world\\hello world.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pasa\\source\\repos\\hello world\\hello world\\hello world.csproj": {
+    "D:\\Code-Script\\hello world\\hello world.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pasa\\source\\repos\\hello world\\hello world\\hello world.csproj",
+        "projectUniqueName": "D:\\Code-Script\\hello world\\hello world.csproj",
         "projectName": "hello world",
-        "projectPath": "C:\\Users\\Pasa\\source\\repos\\hello world\\hello world\\hello world.csproj",
+        "projectPath": "D:\\Code-Script\\hello world\\hello world.csproj",
         "packagesPath": "C:\\Users\\Pasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pasa\\source\\repos\\hello world\\hello world\\obj\\",
+        "outputPath": "D:\\Code-Script\\hello world\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
